@@ -33,13 +33,14 @@ int horspool()
         int k = 0;
         while (k < m && pattern[m - 1 - k] == text[i - k])
         {
-            if (k == m)
+           k++;
+        }
+         if (k == m)
             {
                 return i - m + 1;
             }
             else
                 i += stable[text[i]];
-        }
     }
     return -1;
 }
